@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # this script displays all active IPv4 IP addresses on the local machine
 # ip addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}' = alternative script
-# ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' = alternative script
-ip -4 addr | awk '/inet/ { print $2 }' | cut -d/ -f1
-
+# ip -4 addr | awk '/inet/ { print $2 }' | cut -d/ -f1 = alternative script
+ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*'
