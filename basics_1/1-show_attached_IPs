@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# this script displays all active IPv4 IP addresses on the local machine
+ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*'
