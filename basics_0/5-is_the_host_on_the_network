@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script pings IP address provided by user 5 times
 # 1st. check if the first argument ($1) is empty
 # -z checks if a string is empty (zero length)
