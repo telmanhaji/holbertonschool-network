@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script shows listening sockets, displays listening ports with PID and program to which each socket belongs.
+netsta -lp
