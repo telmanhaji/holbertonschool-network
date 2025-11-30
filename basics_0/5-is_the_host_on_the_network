@@ -1,0 +1,13 @@
+#!/bin/bash
+# This script pings IP address provided by user 5 times
+# 1st. check if the first argument ($1) is empty
+# -z checks if a string is empty (zero length)
+if [ -z "$1" ]
+then
+    # if empty, print the usage message.
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+    # 2nd. if not empty, run the ping command
+    # -c 5 means "Count 5", so it stops after 5 pings
+    ping -c 5 "$1"
+fi
